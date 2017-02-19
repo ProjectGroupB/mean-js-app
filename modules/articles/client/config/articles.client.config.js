@@ -10,7 +10,6 @@ angular.module('articles').run(['Menus',
       type: 'dropdown',
       roles: ['*']
     });
-
     // Add the dropdown list item
     Menus.addSubMenuItem('topbar', 'articles', {
       title: 'List Articles',
@@ -21,6 +20,13 @@ angular.module('articles').run(['Menus',
     Menus.addSubMenuItem('topbar', 'articles', {
       title: 'Create Articles',
       state: 'articles.create',
+      roles: ['user']
+    });
+
+    // Add the dropdown list item
+    Menus.addSubMenuItem('topbar', 'articles', {
+      title: 'Review Articles',
+      state: 'articles.reviewList',
       roles: ['user']
     });
   }
